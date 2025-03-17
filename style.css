@@ -3,11 +3,10 @@
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 .navbar {
     width: 60px;
     height: 100vh;
-    background-color: #333;
+    background-color: #434343;
     transition: width 0.2s ease;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -26,12 +25,51 @@
     max-width: 150px;
 }
 
+.navbar hr {
+    display: block;
+    color: white;
+    opacity: 0;
+    transition: padding 0.2s ease, opacity 0.1s ease;
+    max-width: 150px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.titlunavbar{
+    display: block;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    white-space: normal;
+    word-wrap: break-word;
+    opacity: 0;
+    text-align: center;
+    transition: padding 0.2s ease, opacity 0.2s ease;
+    max-width: 160px;
+}
+
+.titlunavbar hr{
+    display: block;
+    color: white;
+    opacity: 0;
+    transition: padding 0.2s ease, opacity 0.1s ease;
+    max-width: 140px;
+    margin-left: -10px;
+}
+
+.navbar:hover .titlunavbar{
+    padding-left: 20px;
+    width: 200px;
+    opacity: 1;
+}
+
 .navbar .subpunct{
     margin-left: 15px;
 }
 
 .navbar a:hover {
-    background-color: #575757;
+    background-color: #22cbc3;
 }
   
 .navbar:hover {
@@ -40,6 +78,12 @@
 }
   
 .navbar:hover a {
+    padding-left: 20px;
+    width: 200px;
+    opacity: 1;
+}
+
+.navbar:hover hr {
     padding-left: 20px;
     width: 200px;
     opacity: 1;
@@ -60,7 +104,7 @@
 }
 
 .titlu{
-    max-width: 1200px;
+    width: 1000px;
     background-color: rgb(231, 231, 231);
     border-radius: 5px;
     border: rgb(200, 199, 199) 1px solid;
@@ -69,6 +113,7 @@
     padding: 20px;
     opacity: 1;
     transition: transform 0.3s ease;
+    background-color: rgb(197, 197, 197);
 }
 
 .titlu h1{
@@ -84,9 +129,9 @@
 }
 
 
-.infgenerale, .cauzele, .cumsarealizat, .domnia, .consecinte, .importanta, .sarbatoari{
-    max-width: 1200px;
-    background-color: rgb(231, 231, 231);
+.infgenerale, .cauzele, .cumsarealizat, .domnia, .consecinte, .importanta, .sarbatori{
+    width: 1000px;
+    background-color: rgb(197, 197, 197);
     border-radius: 5px;
     border: rgb(200, 199, 199) 1px solid;
     margin-top: 20px; 
@@ -95,18 +140,19 @@
     opacity: 1;
     transition: transform 0.3s ease;
 }
-.infgenerale, .cauzele, .cumsarealizat, .domnia, .consecinte, .importanta, .sarbatoari h1{
-    font-size: 20px;
-    font-weight: bolder;
-}
-.infgenerale, .cauzele, .cumsarealizat, .domnia, .consecinte, .importanta, .sarbatoari h2{
-    font-size: 15px;
-    font-weight: bolder;
+.infgenerale h1, .cauzele h1, .cumsarealizat h1, .domnia h1, .consecinte h1, .importanta h1, .sarbatori h1{
+    font-weight: bold;
+    font-size: 35px;
 }
 
-.infgenerale, .cauzele, .cumsarealizat, .domnia, .consecinte, .importanta, .sarbatoari p{
+.infgenerale h2, .cauzele h2, .cumsarealizat h2, .domnia h2, .consecinte h2, .importanta h2, .sarbatori h2{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.infgenerale, .cauzele, .cumsarealizat, .domnia, .consecinte, .importanta, .sarbatori p{
     font-size: medium;
-    font-weight: lighter;
+    font-weight: light;
 }
 
 .navbar:hover + .mijloc .infgenerale, 
@@ -119,7 +165,7 @@
 }
 
 .navbar:hover + .mijloc .titlu, 
-.navbar:hover + .mijloc .sarbatoari {
+.navbar:hover + .mijloc .sarbatori {
     transform: translateX(10px);
     transition: transform 0.3s ease;
 }
